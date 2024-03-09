@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url('./land.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        nav{
+            border: 2px solid gray;
+            height: 8vh;
+            display: flex;
+            background-color: aliceblue;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 33px;
+
+        }
+        section{
+            border: 2px solid transparent;
+            height: 89vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+        .box{
+            border: 2px solid transparent;
+            width: 80%;
+            height: 45vh;
+            display: flex;
+            border-radius: 17px;
+       overflow-x: auto;
+       backdrop-filter: blur(5px);
+            align-items: center;
+            box-shadow: 0 0 15px gray;
+            justify-content: center;
+            padding: 10px;
+            
+            gap: 10px;
+         
+        }
+       
+      .box::-webkit-scrollbar{
+        width: 0;
+      }
+      
+        img{
+            width: 370px;
+            height: 250px;
+           
+            transition: .4s linear;
+
+        }
+       
+        
+        img:nth-child(1){
+            margin-left: 80%;
+        }
+        img:hover{
+
+transform: scale(1.1);
+
+z-index: 1;
+        }
+        img:not(:hover){
+            filter: grayscale(.8)
+        }
+    </style>
+</head>
+<body>
+    <nav><h1>Image scroll</h1></nav>
+    <section>
+<div class="box">
+ <img src="./land.webp" alt="">
+ <img src="./pexels-creativebin-135940.jpg" alt="">
+ <img src="./pexels-philippe-donn-1133957.jpg" alt="">
+ <img src="./sand.webp" alt="">
+ <img src="./turtl.webp" alt="">
+ <img src="./water.webp" alt="">
+</div>
+
+    </section>
+</body>
+</html>
